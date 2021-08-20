@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\tomcrypt">
+      <UniqueIdentifier>{90d3ea2a-1d4a-4c04-9925-718007558947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tommath">
+      <UniqueIdentifier>{d0303bb9-0d04-482f-9b3c-49c73e7057cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\lib.x86">
+      <UniqueIdentifier>{153b5c07-df85-4a1e-9767-29d47988733c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\lib.x64">
+      <UniqueIdentifier>{e7f400fe-77ad-4893-a156-2536818d1fd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\addon">
+      <UniqueIdentifier>{941dd61e-dace-43d5-a4da-37c07212e8d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\module">
+      <UniqueIdentifier>{892a7556-9f72-4adc-868a-e9a243bacb7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\func">
+      <UniqueIdentifier>{4c821c5d-06f4-4cbb-98eb-ec42183b3785}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="beacon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="global.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shell.h">
+      <Filter>Header Files\func</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tomcrypt.h">
+      <Filter>Header Files\tomcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tomcrypt_argchk.h">
+      <Filter>Header Files\tomcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tomcrypt_cfg.h">
+      <Filter>Header Files\tomcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tomcrypt_cipher.h">
+      <Filter>Header Files\tomcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tomcrypt_custom.h">
+      <Filter>Header Files\tomcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tomcrypt_hash.h">
+      <Filter>Header Files\tomcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tomcrypt_mac.h">
+      <Filter>Header Files\tomcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tomcrypt_macros.h">
+      <Filter>Header Files\tomcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tomcrypt_math.h">
+      <Filter>Header Files\tomcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tomcrypt_misc.h">
+      <Filter>Header Files\tomcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tomcrypt_pk.h">
+      <Filter>Header Files\tomcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tomcrypt_pkcs.h">
+      <Filter>Header Files\tomcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tomcrypt_private.h">
+      <Filter>Header Files\tomcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tomcrypt_prng.h">
+      <Filter>Header Files\tomcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tommath.h">
+      <Filter>Header Files\tommath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tommath_class.h">
+      <Filter>Header Files\tommath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tommath_private.h">
+      <Filter>Header Files\tommath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libtom\header\tommath_superclass.h">
+      <Filter>Header Files\tommath</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GetLastErrorEx.h">
+      <Filter>Header Files\addon</Filter>
+    </ClInclude>
+    <ClInclude Include="data_struct.h">
+      <Filter>Header Files\module</Filter>
+    </ClInclude>
+    <ClInclude Include="http_tool.h">
+      <Filter>Header Files\addon</Filter>
+    </ClInclude>
+    <ClInclude Include="data_deal.h">
+      <Filter>Header Files\addon</Filter>
+    </ClInclude>
+    <ClInclude Include="polling.h">
+      <Filter>Header Files\addon</Filter>
+    </ClInclude>
+    <ClInclude Include="task.h">
+      <Filter>Header Files\addon</Filter>
+    </ClInclude>
+    <ClInclude Include="function.h">
+      <Filter>Header Files\addon</Filter>
+    </ClInclude>
+    <ClInclude Include="ida.h">
+      <Filter>Header Files\func</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="tomcrypt.lib">
+      <Filter>Resource Files\lib.x86</Filter>
+    </Library>
+    <Library Include="tommath.lib">
+      <Filter>Resource Files\lib.x86</Filter>
+    </Library>
+    <Library Include="tomcrypt_x64.lib">
+      <Filter>Resource Files\lib.x64</Filter>
+    </Library>
+    <Library Include="tommath_x64.lib">
+      <Filter>Resource Files\lib.x64</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
