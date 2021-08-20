@@ -151,7 +151,7 @@ rsa加密后的数据，这个调试teamserver的时候可以接受的这些数�
 
 ## vs studio生成
 
-这里我将代码进行了重构，自己去github下个tomcrypt以及tommath编译一份，拿到头文件，以及lib文件，lib文件添加到resource里，头文件全部添加到现有文件，就可以编译了
+这里我将代码进行了重构，直接就可以编译了
 
 ![image-20210801231316206](imgs/beacon_imple/image-20210801231316206.png)
 
