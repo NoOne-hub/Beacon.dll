@@ -12,10 +12,11 @@
 
 目录结构
 
-- Beacon文件夹(可以直接编译运行的vs工程，替换global.cpp的shellcode即可，那里有64位跟32位shellcode设置)
-- beacon.x64.dll(原生dll)
-- beacon.x64.dll.i64(写了一些备注的ida文件)
-- x86的没咋弄
+- Project文件夹(可以直接编译运行的vs工程，替换global.cpp的shellcode即可，那里有64位跟32位shellcode设置)
+- reverse_things
+  - beacon.x64.dll(原生dll)
+  - beacon.x64.dll.i64(写了一些备注的ida文件)
+  - x86的没咋弄
 
 自行食用
 
