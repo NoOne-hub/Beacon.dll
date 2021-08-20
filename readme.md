@@ -152,6 +152,8 @@ rsa加密后的数据，这个调试teamserver的时候可以接受的这些数�
 
 ## vs studio生成
 
+(PS: 这段使用教程其实WBGIII大佬博客有讲，但我有个外国朋友看不懂中文的工具，这里发个英文工具图)
+
 首先cobalt strike获取beacon.raw，winhex打开
 
 ![image-20210820220720724](imgs/beacon_imple/image-20210820220720724.png)
