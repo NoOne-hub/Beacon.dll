@@ -81,7 +81,7 @@ Program arguments部分
 
 读取int时候的修改，这里看个人
 
-![image-20210801223249010](image-20210801223249010.png)
+![image-20210801223249010](./imgs/beacon_imple/image-20210801223249010.png)
 
 get_short同样修改
 
