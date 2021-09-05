@@ -16,3 +16,6 @@
 
 ![image-20210905105619927](imgs/implement_function/image-20210905105619927.png)
 
+结果
+
+![image-20210905110429573](imgs/implement_function/image-20210905110429573.png)
