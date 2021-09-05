@@ -42,9 +42,6 @@
     <ClCompile Include="global.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="shell.h">
-      <Filter>Header Files\func</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -130,6 +127,12 @@
     </ClInclude>
     <ClInclude Include="ida.h">
       <Filter>Header Files\func</Filter>
+    </ClInclude>
+    <ClInclude Include="shell.h">
+      <Filter>Header Files\func</Filter>
+    </ClInclude>
+    <ClInclude Include="PipeCmd.h">
+      <Filter>Header Files\addon</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

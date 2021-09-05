@@ -2,6 +2,7 @@
 //global variable
 #include <Windows.h>
 #include "tomcrypt.h"
+#include "ida.h"
 
 extern char Global_http_post_uri[3296];
 extern DWORD Globala6;
@@ -69,3 +70,4 @@ extern int Global_encryption_Metadata_size;
 
 extern symmetric_CBC dword_10033C78;
 extern CHAR* Globa_unknown_data;
+

