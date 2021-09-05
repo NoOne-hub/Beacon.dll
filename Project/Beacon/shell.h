@@ -3,6 +3,7 @@
 #include "data_deal.h"
 #include "PipeCmd.h"
 #include "task.h"
+#include "function.h"
 
 DWORD env_extend(LPCSTR lpSrc, void* a2, size_t Size)
 {
@@ -84,11 +85,7 @@ void* __fastcall sub_180013DC4(__int64 a1)
 {
 	return memset(*(void**)a1, 0, *(int*)(a1 + 20));
 }
-void __fastcall sub_180013E0C(void* Block)
-{
-	free(*(void**)Block);
-	free(Block);
-}
+
 void shell(void* a1, int a2)
 {
 	struc_1* v4; // r12
@@ -141,5 +138,5 @@ void shell(void* a1, int a2)
 		free(result_buffer);
 		//sub_18000EF38(v8, (unsigned int)(v11 + 1), v9);
 	}
-	return sub_180013E0C(v4);
+	return clean_it(v4);
 }

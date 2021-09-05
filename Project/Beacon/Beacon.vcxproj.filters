@@ -134,6 +134,9 @@
     <ClInclude Include="PipeCmd.h">
       <Filter>Header Files\addon</Filter>
     </ClInclude>
+    <ClInclude Include="upload.h">
+      <Filter>Header Files\func</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="tomcrypt.lib">

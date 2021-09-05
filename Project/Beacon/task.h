@@ -5,6 +5,7 @@
 #include "data_deal.h"
 #include "function.h"
 #include "shell.h"
+#include "upload.h"
 
 void Task_handle(char* Src, int size, int a3);
 
@@ -97,7 +98,7 @@ void Task_handle(char* Taskdata, int Taskdata_size, int Taskdata_id)
 		//sub_10004403(Taskdata, Taskdata_size, 1);
 		return;
 	case 10:
-		//upload();
+		upload(Taskdata, Taskdata_size, "wb");
 		//sub_10002B59(Taskdata, Taskdata_size, "wb");
 		return;
 	case 11:

@@ -53,6 +53,7 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="polling.h" />
     <ClInclude Include="task.h" />
+    <ClInclude Include="upload.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="tomcrypt.lib" />

